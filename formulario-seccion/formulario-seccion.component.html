@@ -1,0 +1,15 @@
+<section>
+  <fieldset>
+    <label>id Numerica</label>
+    <input type="text" [value]="seccion.idSeccion" (input)="inpid($event)">
+  </fieldset>
+  <fieldset>
+    <label>Nombre de la seccion</label>
+    <input type="text" [value]="seccion.nombreSeccion" (input)="inpnombreseccion($event)">
+  </fieldset>
+
+  <fieldset>
+    <button type="button" (click)="guardarElemnto()">Guardar</button>
+  </fieldset>
+
+</section>

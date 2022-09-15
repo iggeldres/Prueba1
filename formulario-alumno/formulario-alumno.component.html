@@ -1,0 +1,34 @@
+<section>
+  <fieldset>
+    <label>Rut</label>
+    <input type="text" [value]="alumno.rut" (input)="inprut($event)">
+  </fieldset>
+  <fieldset>
+    <label>Nombre</label>
+    <input type="text" [value]="alumno.nombre" (input)="inpnombre($event)">
+  </fieldset>
+  <fieldset>
+    <label>Apellido</label>
+    <input type="text" [value]="alumno.apellido" (input)="inpapellido($event)">
+  </fieldset>
+  <fieldset>
+    <label>Edad</label>
+    <input type="number" [value]="alumno.edad" (input)="inpedad($event)">
+  </fieldset>
+  <fieldset>
+    <label >Seccion</label>
+    <select [value]="alumno.seccion" (change)="inpseccion($event)">
+        <option
+            *ngFor="let temporal of seccion"
+            [value]="temporal"
+        >
+            {{temporal}}
+        </option>
+    </select>
+</fieldset>
+
+  <fieldset>
+    <button type="button" (click)="guardarElemnto()">Guardar</button>
+  </fieldset>
+
+</section>
